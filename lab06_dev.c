@@ -61,14 +61,13 @@ static int __init lab_init(void)
 	return ret;
 }
 
-module_init(lab_init);
-
 static void __exit lab_exit(void)
 {
 	misc_deregister(&lab06_dev);
 	del_timer(&timer);
 }
 
+module_init(lab_init);
 module_exit(lab_exit);
 
 MODULE_LICENSE("GPL");
