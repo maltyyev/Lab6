@@ -11,7 +11,7 @@ static long timeout = 2000;
 void time_handler(unsigned long data)
 {
 	int ret;
-	
+
 	printk(KERN_INFO "Hello, World!, timeout=%ld \n", timeout);
 	ret = mod_timer(&timer, jiffies + msecs_to_jiffies(timeout));
 	if (ret) {
@@ -49,7 +49,7 @@ static int __init lab_init(void)
 	if (ret) {
 		printk(KERN_ERR "Unable to register \"Lab06\" device\n");
 	}
-	
+
 	setup_timer(&timer, time_handler, 0);
 
 	ret = mod_timer(&timer, jiffies + msecs_to_jiffies(timeout));
@@ -72,6 +72,6 @@ static void __exit lab_exit(void)
 module_exit(lab_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Shpakovsky-Bogdan");
+MODULE_AUTHOR("maltyyev");
 MODULE_DESCRIPTION("\"Lab06\" module");
 MODULE_VERSION("dev");
