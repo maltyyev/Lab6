@@ -72,6 +72,6 @@ static void __exit lab_exit(void)
 module_exit(lab_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("maltyyev");
+MODULE_AUTHOR("maltyyev <amk0794@gmail.com>");
 MODULE_DESCRIPTION("\"Lab06\" module");
 MODULE_VERSION("dev");
